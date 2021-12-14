@@ -157,8 +157,11 @@ bkvm address => http://localhost:7750/bkvm
 
     ```
     cd pulsar-manager/front-end
+    export PATH=.gradle/npm/npm-v6.4.1/bin:.gradle/nodejs/node-v10.14.1-darwin-x64/bin:$PATH
     npm install --save
     npm run dev
+    # for frontend dist: https://github.com/apache/pulsar-manager/pull/288#issuecomment-612384582
+    npm run build:prod
     ```
 
 After running these steps, the Pulsar Manager is running locally at http://127.0.0.1/#/environments.
